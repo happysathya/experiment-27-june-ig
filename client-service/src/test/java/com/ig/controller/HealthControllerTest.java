@@ -2,6 +2,7 @@ package com.ig.controller;
 
 import com.ig.dto.HealthResponse;
 import com.ig.service.HealthService;
+import com.ig.service.OriginService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -21,6 +22,9 @@ class HealthControllerTest {
 
     @MockBean
     private HealthService healthService;
+
+    @MockBean
+    private OriginService originService;
 
     @Test
     void getHealth_ShouldReturnHttp200() throws Exception {
